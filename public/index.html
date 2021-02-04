@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title></title>
+</head>
+
+<body>
+    <noscript>
+      <strong>We're sorry but wechat-mall doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue-router/3.1.5/vue-router.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vuex/3.1.2/vuex.min.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.js"></script>
+    <!-- <script src="https://cdn.suoluomei.com/common/js2.0/html2canvas/1.0/html2canvas.min.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.9.4/qs.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+    <!-- <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=C7IBZ-GWMKX-ROF4Q-7GQN6-PH2NS-WNFWD"></script> -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js'></script> -->
+    <% if(process.env.VUE_APP_ENV=='test'){ %>
+        <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+        <script>
+            eruda.init();
+        </script>
+        <% } %>
+            <!-- built files will be auto injected -->
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+$maincolor: #FD5251;
+$bgcolor: #f2f2f2;
+$activeColor: #FF5E36;
+@mixin fl($data1, $data2, $data3:#333) {
+    font-size: $data1;
+    line-height: $data2;
+    color: $data3;
+}
+
+@mixin flex($data1, $data2) {
+    display: flex;
+    flex-direction: $data1;
+    justify-content: $data2;
+}
+
+%margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%side-padding {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+%textstyle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin bg($data1, $data2, $data3, $data4, $data5) {
+    $url:"../assets/imgs/#{$data1}";
+    background: url($url) no-repeat $data2 $data3;
+    background-size: $data4 $data5;
+}
+
+@mixin position($ver1, $ver2, $data1, $data2, $type1:absolute) {
+    position: $type1;
+    #{$ver1}: $data1;
+    #{$ver2}: $data2;
+}
+
+@mixin placeholder($class) {
+    #{$class} input::-webkit-input-placeholder {
+        color: $tipscolor;
+    }
+}
+
+@mixin center($direction:0) {
+    position: absolute;
+    @if $direction==0 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @else {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
